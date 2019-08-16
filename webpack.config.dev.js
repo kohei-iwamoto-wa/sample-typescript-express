@@ -3,7 +3,7 @@ const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
     mode: 'development',
-    entry: './src/server.ts',
+    entry: ['./src/server.ts','./src/form.ts'],
     target: 'node',               // Module not found: Error: Can't resolve 'fs'とかいっぱい出たら、この行書き忘れ
     externals: [nodeExternals()], 
     devtool: 'inline-source-map',
@@ -43,7 +43,7 @@ module.exports = {
         extensions: [ '.ts', '.js' ]
     },
     output: {
-        filename: 'server.js',
+        filename: '[name].bumdle.js',
         path: path.resolve(__dirname, 'dist')
     }
 };
