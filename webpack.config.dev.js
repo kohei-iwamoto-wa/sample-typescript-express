@@ -3,7 +3,7 @@ const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
     mode: 'development',
-    entry: './src/server.ts',     // src下に書いていくので　src/server.tsにしとく
+    entry: './src/server.ts',
     target: 'node',               // Module not found: Error: Can't resolve 'fs'とかいっぱい出たら、この行書き忘れ
     externals: [nodeExternals()], 
     devtool: 'inline-source-map',
